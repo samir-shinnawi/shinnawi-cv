@@ -33,7 +33,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offse
 /* ---- side rail ---- */
 .rail{position:fixed;top:0;right:0;bottom:0;width:72px;z-index:10;background:var(--tint-2);border-left:1px solid var(--line-2);display:flex;flex-direction:column;align-items:center;gap:24px;padding:20px 0}
 .rail .avatar{display:block}
-.rail .avatar img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;border:2px solid var(--navy)}
+.rail .avatar img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 35%;display:block;border:2px solid var(--navy)}
 .rail nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
 .rail nav a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy);text-decoration:none;transition:background .15s,color .15s}
 .rail nav a:hover,.rail nav a[aria-current="true"]{background:#FFFFFF;color:var(--blue)}
@@ -57,7 +57,7 @@ main{max-width:1120px;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 .btn.ghost{border-color:var(--rail);color:var(--navy);background:transparent}
 .btn.ghost:hover{background:var(--tint);text-decoration:none;color:var(--navy)}
 .hero .side{flex:0 1 300px;display:flex;flex-direction:column;gap:18px}
-.hero .portrait{width:100%;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;display:block;border-radius:4px}
+.hero .portrait{width:100%;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;display:block;border-radius:4px}
 .langbox{background:var(--tint-2);padding:16px 18px;border-radius:4px;display:flex;flex-direction:column;gap:9px}
 .langbox .t{display:flex;align-items:center;gap:8px}
 .langbox .t .ms{font-size:18px;color:var(--navy)}
@@ -68,12 +68,15 @@ main{max-width:1120px;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 .lang b{text-align:right;color:var(--blue)}
 
 /* ---- goals ---- */
-.goals{background:var(--tint-2);border-radius:4px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:18px;margin-top:40px}
-.goal-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:g}
-.goal-list li{background:#FFFFFF;border-radius:4px;padding:16px 18px 16px 16px;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;border-left:3px solid var(--blue)}
-.goal-list li .ms{font-size:22px;color:var(--blue);margin-top:1px}
-.goal-list li p{color:var(--ink-2);font-size:15px;text-wrap:pretty}
-.goal-list li p::before{counter-increment:g;content:counter(g) ". ";font-weight:700;color:var(--navy)}
+.goals{background:var(--tint-2);border-radius:4px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:22px;margin-top:40px}
+.goal-groups{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.goal-group{display:flex;flex-direction:column;gap:10px;min-width:0}
+.goal-group h3{margin:0 0 4px;font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);font-weight:700;display:flex;align-items:center;gap:8px}
+.goal-group h3 .ms{font-size:18px;color:var(--blue)}
+.goal-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.goal-list li{background:#FFFFFF;border-radius:4px;border-left:3px solid var(--blue);padding:10px 14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;line-height:1.35}
+.goal-list li strong{color:var(--navy);font-size:15px;font-weight:700;white-space:nowrap}
+.goal-list li span{color:var(--ink-2);font-size:14px}
 
 /* ---- stats ---- */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -153,8 +156,7 @@ main{max-width:1120px;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 footer{border-top:1px solid var(--line);background:var(--tint-2)}
 footer div{max-width:1120px;margin:0 auto;padding:20px clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--ink-2)}
 
-@media (max-width:1000px){ .goal-list{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:560px){ .goal-list{grid-template-columns:1fr} }
+@media (max-width:1000px){ .goal-groups{grid-template-columns:1fr} }
 @media (max-width:760px){
   .rail{top:auto;bottom:0;left:0;right:0;width:auto;height:64px;flex-direction:row;justify-content:space-around;padding:0 8px;gap:0;border-left:0;border-top:1px solid var(--line-2);padding-bottom:env(safe-area-inset-bottom,0px)}
   .rail .avatar{display:none}
@@ -227,15 +229,29 @@ footer div{max-width:1120px;margin:0 auto;padding:20px clamp(20px,4vw,40px);disp
 
   <section class="goals" aria-labelledby="goals-h">
     <div class="sec-head">
-      <span class="eyebrow">Where I am heading · 3 to 5 year goals</span>
+      <span class="eyebrow">Where I am heading</span>
       <h2 class="h2" id="goals-h" style="font-size:clamp(24px,3vw,30px)">Goals</h2>
     </div>
-    <ol class="goal-list">
-      <li><span class="ms">science</span><p>Build a strong academic career in neuroradiology, combining high-level clinical practice with research and education.</p></li>
-      <li><span class="ms">hub</span><p>Develop an international network of collaborators and lead meaningful research projects in neuroimaging.</p></li>
-      <li><span class="ms">co_present</span><p>Take on increasing leadership and teaching responsibilities within radiology.</p></li>
-      <li><span class="ms">flight_takeoff</span><p>Spend one or two years working abroad, to gain exposure to a new hospital and healthcare system and to grow an international professional and academic presence.</p></li>
-    </ol>
+    <div class="goal-groups">
+      <div class="goal-group">
+        <h3><span class="ms">event_upcoming</span>Next year</h3>
+        <ul class="goal-list">
+          <li><strong>Attending practice</strong><span>consolidate my first year as attending neuroradiologist at Rambam</span></li>
+          <li><strong>Neuroimaging research</strong><span>lead a first-author study and submit it for publication</span></li>
+          <li><strong>Teaching</strong><span>expand my neuroradiology lectures for residents and students</span></li>
+          <li><strong>Conferences</strong><span>present at ECR and ASNR and strengthen ESNR ties</span></li>
+        </ul>
+      </div>
+      <div class="goal-group">
+        <h3><span class="ms">flag</span>3 to 5 years</h3>
+        <ul class="goal-list">
+          <li><strong>Academic career</strong><span>high-level clinical practice combined with research and education</span></li>
+          <li><strong>International network</strong><span>build collaborations and lead multicentre neuroimaging projects</span></li>
+          <li><strong>Leadership</strong><span>take on leadership and teaching roles within radiology</span></li>
+          <li><strong>Working abroad</strong><span>one or two years in a new hospital and healthcare system</span></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="trajectory" class="section">
