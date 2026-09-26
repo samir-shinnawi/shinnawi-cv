@@ -5,7 +5,7 @@ Static single page, no build step. Live at https://vanioljantunes.github.io/shin
 - `index.html` — the whole site (CSS, content and animation inline)
 - `photo.jpg` — portrait
 - `Shinnawi_CV_2026.pdf` — full CV served by the "Download full CV" button
-- `logos/` — ASNR (official SVG), ESR, Tel Aviv University, HHU Düsseldorf, Technion
+- `logos/` — ASNR (official SVG from asnr.org), ESR (official SVG from myesr.org), Tel Aviv University, HHU Düsseldorf, Technion
 
 Animation: [Motion](https://motion.dev) v13.4.4 as UMD from jsDelivr. Fonts and Material Symbols from Google Fonts.
 
