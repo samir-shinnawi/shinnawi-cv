@@ -68,8 +68,8 @@ main{max-width:1120px;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 .lang b{text-align:right;color:var(--blue)}
 
 /* ---- goals ---- */
-.goals{background:var(--tint-2);border-radius:4px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:18px;margin-bottom:40px}
-.goal-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;counter-reset:g}
+.goals{background:var(--tint-2);border-radius:4px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:18px;margin-top:40px}
+.goal-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:g}
 .goal-list li{background:#FFFFFF;border-radius:4px;padding:16px 18px 16px 16px;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;border-left:3px solid var(--blue)}
 .goal-list li .ms{font-size:22px;color:var(--blue);margin-top:1px}
 .goal-list li p{color:var(--ink-2);font-size:15px;text-wrap:pretty}
@@ -150,6 +150,8 @@ main{max-width:1120px;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 footer{border-top:1px solid var(--line);background:var(--tint-2)}
 footer div{max-width:1120px;margin:0 auto;padding:20px clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--ink-2)}
 
+@media (max-width:1000px){ .goal-list{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:560px){ .goal-list{grid-template-columns:1fr} }
 @media (max-width:760px){
   .rail{top:auto;bottom:0;left:0;right:0;width:auto;height:64px;flex-direction:row;justify-content:space-around;padding:0 8px;gap:0;border-left:0;border-top:1px solid var(--line-2);padding-bottom:env(safe-area-inset-bottom,0px)}
   .rail .avatar{display:none}
@@ -213,6 +215,13 @@ footer div{max-width:1120px;margin:0 auto;padding:20px clamp(20px,4vw,40px);disp
     </div>
   </section>
 
+  <section class="stats" aria-label="At a glance">
+    <div><span class="n" data-count="10">10</span><b>Years as a physician</b><span class="s">Since graduating in 2016</span></div>
+    <div><span class="n" data-count="11">11</span><b>Conference presentations</b><span class="s">First author, ASNR, ECR, ESNR, SAR, ISRA</span></div>
+    <div><span class="n" data-count="200">200+</span><b>Students tutored</b><span class="s">From 60 countries</span></div>
+    <div><span class="n" data-count="4">4</span><b>Languages</b><span class="s">Three native, German at C2</span></div>
+  </section>
+
   <section class="goals" aria-labelledby="goals-h">
     <div class="sec-head">
       <span class="eyebrow">Where I am heading · 3 to 5 year goals</span>
@@ -224,13 +233,6 @@ footer div{max-width:1120px;margin:0 auto;padding:20px clamp(20px,4vw,40px);disp
       <li><span class="ms">co_present</span><p>Take on increasing leadership and teaching responsibilities within radiology.</p></li>
       <li><span class="ms">flight_takeoff</span><p>Spend one or two years working abroad, to gain exposure to a new hospital and healthcare system and to grow an international professional and academic presence.</p></li>
     </ol>
-  </section>
-
-  <section class="stats" aria-label="At a glance">
-    <div><span class="n" data-count="10">10</span><b>Years as a physician</b><span class="s">Since graduating in 2016</span></div>
-    <div><span class="n" data-count="11">11</span><b>Conference presentations</b><span class="s">First author, ASNR, ECR, ESNR, SAR, ISRA</span></div>
-    <div><span class="n" data-count="200">200+</span><b>Students tutored</b><span class="s">From 60 countries</span></div>
-    <div><span class="n" data-count="4">4</span><b>Languages</b><span class="s">Three native, German at C2</span></div>
   </section>
 
   <section id="trajectory" class="section">
