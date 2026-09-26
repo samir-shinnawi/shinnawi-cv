@@ -3,342 +3,420 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Curriculum vitae of Samir Shinnawi, attending neuroradiologist at Rambam Health Care Campus, Haifa.">
-<title>Samir Shinnawi</title>
+<title>Samir Shinnawi — Neuroradiologist</title>
+<meta name="description" content="Samir Shinnawi, attending neuroradiologist at Rambam Health Care Campus, Haifa. Lecturer at the Technion, ASNR International Recognition Award 2024.">
+<link rel="icon" href="photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap">
 <style>
 :root{
-  --bg:#FFFFFF; --bg-2:#F5F7FA; --ink:#1B1F24; --ink-2:#3D4651; --muted:#6B7683;
-  --blue:#1F5FBF; --blue-deep:#174A95; --blue-soft:#EAF1FC; --line:#E4E8EE; --line-2:#CBD3DD; --mark:#F5C242;
-  --head:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
-  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+  --navy:#1B2F57; --blue:#2E5AA8; --ink:#1F2733; --ink-2:#111111;
+  --tint:#EEF3FA; --tint-2:#E3ECF8; --line:#DDE5F0; --line-2:#C9D6E8; --rail:#9AB0D4;
+  --serif:"Source Serif 4",Georgia,serif; --sans:"Source Sans 3",Helvetica,Arial,sans-serif;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){ color-scheme:dark;
-    --bg:#0F1216; --bg-2:#161B21; --ink:#EEF1F4; --ink-2:#C4CBD3; --muted:#8B95A1;
-    --blue:#6FA3F2; --blue-deep:#9BC0F7; --blue-soft:#172438; --line:#262D36; --line-2:#3A434E; --mark:#E0B040; }
-}
-:root[data-theme="dark"]{ color-scheme:dark;
-  --bg:#0F1216; --bg-2:#161B21; --ink:#EEF1F4; --ink-2:#C4CBD3; --muted:#8B95A1;
-  --blue:#6FA3F2; --blue-deep:#9BC0F7; --blue-soft:#172438; --line:#262D36; --line-2:#3A434E; --mark:#E0B040; }
-
 *{box-sizing:border-box}
-body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:14.5px; line-height:1.45; -webkit-font-smoothing:antialiased}
-a{color:var(--blue); text-decoration:none}
-a:hover{text-decoration:underline}
-button:focus-visible,a:focus-visible{outline:2px solid var(--blue); outline-offset:2px}
-::selection{background:var(--blue-soft)}
-b{font-weight:600}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--navy);text-decoration:underline}
+::selection{background:#C9D8F0}
+h1,h2,h3{margin:0}
+p{margin:0}
+.ms{font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';-webkit-font-smoothing:antialiased}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--blue);font-weight:600;text-transform:uppercase}
+.h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,42px);color:var(--navy);line-height:1.15}
+.lead{color:var(--ink-2);font-size:18px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 
-.page{max-width:1240px; margin:0 auto; padding-inline:clamp(16px,3.5vw,44px); padding-block:28px 40px}
+/* ---- side rail ---- */
+.rail{position:fixed;top:0;right:0;bottom:0;width:72px;z-index:10;background:var(--tint-2);border-left:1px solid var(--line-2);display:flex;flex-direction:column;align-items:center;gap:24px;padding:20px 0}
+.rail .avatar{display:block}
+.rail .avatar img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 20%;display:block;border:2px solid var(--navy)}
+.rail nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.rail nav a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy);text-decoration:none;transition:background .15s,color .15s}
+.rail nav a:hover,.rail nav a[aria-current="true"]{background:#FFFFFF;color:var(--blue)}
+.rail nav a .ms{font-size:22px}
+.shell{padding-right:72px;display:flex;flex-direction:column}
+main{max-width:1120px;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 
-/* ---- header ---- */
-.head{display:grid; grid-template-columns:auto 1fr auto; gap:28px; align-items:end; padding-bottom:22px; border-bottom:2px solid var(--ink)}
-.photo{width:148px; height:148px; border-radius:4px; object-fit:cover; object-position:50% 20%; display:block; background:var(--bg-2)}
-.id h1{font-family:var(--head); font-variation-settings:"wdth" 87.5; font-weight:800; font-size:clamp(34px,4.6vw,58px); line-height:.95; letter-spacing:-.02em; margin:0 0 10px; text-transform:uppercase}
-.id h1 .mk{position:relative; display:inline-block}
-.id h1 .mk::after{content:""; position:absolute; left:-.04em; right:-.04em; bottom:.06em; height:.28em; background:var(--mark); z-index:-1; transform-origin:0 50%}
-.id .role{margin:0; font-size:17px; color:var(--ink-2); max-width:56ch}
-.id .role b{color:var(--ink)}
-.id .sub{margin:4px 0 0; color:var(--muted); font-size:14px}
-.contact{display:flex; flex-direction:column; gap:5px; align-items:flex-end; font-size:13.5px; color:var(--ink-2); text-align:right}
-.contact .row{display:inline-flex; align-items:center; gap:8px; white-space:nowrap}
-.contact .lab{font-family:var(--head); font-size:10.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
-.copy{appearance:none; border:1px solid var(--line-2); background:transparent; color:var(--muted); font:inherit; font-size:11px; padding:1px 7px; border-radius:3px; cursor:pointer}
-.copy:hover,.copy[data-done="1"]{color:var(--blue); border-color:var(--blue)}
-.langs{display:flex; gap:6px; margin-top:4px; flex-wrap:wrap; justify-content:flex-end}
-.langs span{font-size:12px; padding:1px 8px; border-radius:3px; background:var(--bg-2); border:1px solid var(--line); color:var(--ink-2)}
+/* ---- hero ---- */
+.hero{padding:clamp(40px,7vw,88px) 0 40px;display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.hero .txt{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(44px,7vw,76px);line-height:1;letter-spacing:-.015em;color:var(--navy)}
+.hero .where{color:var(--ink-2)}
+.hero .intro{margin-top:8px;font-family:var(--serif);font-size:clamp(18px,2vw,21px);line-height:1.5;max-width:40em;text-wrap:pretty}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chips span{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--tint);color:var(--navy)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:4px;text-decoration:none;border:1px solid transparent;transition:background .15s,color .15s,border-color .15s;cursor:pointer;font:inherit;font-weight:600}
+.btn .ms{font-size:20px}
+.btn.primary{background:var(--navy);color:#FFFFFF}
+.btn.primary:hover{background:var(--blue);color:#FFFFFF;text-decoration:none}
+.btn.ghost{border-color:var(--rail);color:var(--navy);background:transparent}
+.btn.ghost:hover{background:var(--tint);text-decoration:none;color:var(--navy)}
+.hero .side{flex:0 1 300px;display:flex;flex-direction:column;gap:18px}
+.hero .portrait{width:100%;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;display:block;border-radius:4px}
+.langbox{background:var(--tint-2);padding:16px 18px;border-radius:4px;display:flex;flex-direction:column;gap:9px}
+.langbox .t{display:flex;align-items:center;gap:8px}
+.langbox .t .ms{font-size:18px;color:var(--navy)}
+.langbox .t b{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--navy)}
+.lang{display:grid;grid-template-columns:64px minmax(0,1fr) 52px;gap:10px;align-items:center;font-size:14px}
+.lang .bar{height:6px;background:var(--line-2);border-radius:3px;overflow:hidden}
+.lang .bar i{display:block;height:100%;width:100%;background:var(--navy);transform-origin:0 50%}
+.lang b{text-align:right;color:var(--blue)}
 
-/* ---- grid ---- */
-.grid{display:grid; grid-template-columns:7fr 5fr; gap:0 40px; margin-top:26px; align-items:start}
-.col{display:flex; flex-direction:column; gap:26px; min-width:0}
-.blk{min-width:0}
-.blk h2{font-family:var(--head); font-variation-settings:"wdth" 87.5; font-weight:700; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); margin:0 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line-2); display:flex; justify-content:space-between; align-items:baseline}
-.blk h2 small{font-family:var(--body); font-weight:400; letter-spacing:0; text-transform:none; color:var(--muted); font-size:12.5px}
-.blk h3{font-family:var(--head); font-weight:600; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:14px 0 6px}
-.blk h3:first-of-type{margin-top:0}
-.stack{display:flex; flex-direction:column; gap:26px}
+/* ---- stats ---- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:24px 20px;display:flex;flex-direction:column;gap:2px}
+.stats div:first-child{padding-left:0}
+.stats .n{font-family:var(--serif);font-size:44px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.stats b{margin-top:6px}
+.stats span.s{font-size:14px;color:var(--ink-2)}
 
-/* rows */
-.rows{list-style:none; margin:0; padding:0}
-.rows li{display:grid; grid-template-columns:92px 1fr; gap:14px; padding:6px 0; border-bottom:1px solid var(--line)}
-.rows li:last-child{border-bottom:0}
-.rows.tight li{padding:4px 0}
-.when{color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; font-size:13.5px; padding-top:1px}
-.when.now{color:var(--blue); font-weight:600}
-.what{min-width:0}
-.what b{display:block; line-height:1.3}
-.what span{display:block; color:var(--ink-2); font-size:13.5px}
-.what .a{color:var(--muted); font-size:13px}
-.pill{display:inline-block; font-family:var(--head); font-size:10.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--blue-deep); background:var(--blue-soft); border-radius:3px; padding:1px 6px; margin-top:3px}
+/* ---- sections ---- */
+.section{padding:60px 0;display:flex;flex-direction:column;gap:28px;border-top:1px solid var(--line);scroll-margin-top:12px}
+#trajectory{padding:80px 0 40px;border-top:0;gap:32px}
 
-/* experience with dot rail */
-.exp li{grid-template-columns:92px 14px 1fr; gap:10px}
-.exp li .dot{position:relative; width:14px}
-.exp li .dot::before{content:""; position:absolute; left:6px; top:-6px; bottom:-6px; width:1px; background:var(--line-2)}
-.exp li:first-child .dot::before{top:9px}
-.exp li:last-child .dot::before{bottom:auto; height:14px}
-.exp li .dot::after{content:""; position:absolute; left:2.5px; top:7px; width:8px; height:8px; border-radius:50%; background:var(--bg); border:1.5px solid var(--blue)}
-.exp li.now .dot::after{background:var(--blue)}
+/* trajectory */
+.tl{display:flex;flex-direction:column}
+.yr{display:grid;grid-template-columns:clamp(64px,10vw,110px) 20px minmax(0,1fr);gap:0 clamp(12px,2vw,24px)}
+.yr .y{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1;color:var(--navy);padding-top:2px}
+.yr .rule{position:relative}
+.yr .rule::before{content:"";position:absolute;left:9px;top:0;bottom:0;width:2px;background:var(--line-2)}
+.yr .rule::after{content:"";position:absolute;left:4px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px #FFFFFF}
+.yr .body{padding-bottom:36px;display:flex;flex-direction:column;gap:14px}
+.yr:last-child .body{padding-bottom:8px}
+.ev{display:flex;flex-direction:column;gap:3px;max-width:44em}
+.ev .h{display:flex;align-items:center;gap:8px}
+.ev .h .ms{font-size:18px;color:var(--blue)}
+.ev h3{font-size:17px;font-weight:700;color:var(--navy)}
+.ev p{color:var(--ink-2);text-wrap:pretty}
 
-/* two-col mini lists */
-.two{display:grid; grid-template-columns:1fr 1fr; gap:0 24px}
-.mem{list-style:none; margin:0; padding:0}
-.mem li{display:grid; grid-template-columns:38px 1fr; gap:10px; padding:3px 0; font-size:13.5px; border-bottom:1px solid var(--line)}
-.mem li:last-child{border-bottom:0}
-.mem .when{font-size:13px}
+/* publications carousel */
+.pubhead{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between}
+.carnav{display:flex;gap:8px}
+.carnav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--rail);background:#FFFFFF;color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}
+.carnav button:hover{background:var(--tint)}
+.carnav button:disabled{opacity:.35;cursor:default;background:#FFFFFF}
+.carnav .ms{font-size:22px}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 6px;margin:-2px -2px 0}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 280px;width:280px;height:250px;scroll-snap-align:start;background:var(--tint);border-radius:4px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.card .tag{font-size:12px;letter-spacing:.1em;color:var(--blue);font-weight:700;text-transform:uppercase;height:16px;line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .jr{font-size:13px;color:var(--ink-2);height:18px;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .ti{font-family:var(--serif);font-size:17px;line-height:1.3;color:var(--navy);font-weight:600;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;height:calc(1.3em * 4);margin-top:2px}
+.card .note{margin-top:auto;font-size:13px;color:var(--ink-2);height:18px;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dots{display:flex;gap:6px;justify-content:center}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--line-2)}
+.dots i.on{background:var(--blue)}
 
 /* awards */
-.awd{list-style:none; margin:0; padding:0; display:grid; gap:6px}
-.awd li{display:grid; grid-template-columns:62px 1fr; gap:10px; padding:7px 10px; background:var(--bg-2); border-left:3px solid var(--mark); font-size:13.5px; line-height:1.35}
-.awd li b{color:var(--ink)}
-.awd li span{color:var(--ink-2)}
+.awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px 20px;text-align:center}
+.aw{display:flex;flex-direction:column;align-items:center;gap:12px}
+.aw b.t{font-family:var(--serif);font-size:17px;line-height:1.25;color:var(--navy);min-height:44px;font-weight:600}
+.aw .logo{width:96px;height:96px;border-radius:50%;background:#FFFFFF;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:14px}
+.aw .logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.aw .logo.wide img{width:100%}
+.aw span.d{color:var(--ink-2);font-size:14px;max-width:18em}
+.aw span.d b{color:var(--blue)}
 
-/* publications */
-.pubs{list-style:none; margin:0; padding:0; counter-reset:p}
-.pubs li{display:grid; grid-template-columns:22px 1fr; gap:8px; padding:5px 0; font-size:13.5px; line-height:1.4; color:var(--ink-2); border-bottom:1px solid var(--line)}
-.pubs li:last-child{border-bottom:0}
-.pubs li::before{counter-increment:p; content:counter(p) "."; color:var(--muted); font-variant-numeric:tabular-nums}
-.pubs .t{color:var(--ink); font-weight:600}
-.pubs .me{color:var(--blue-deep); font-weight:600}
-.pubs i{color:var(--ink-2)}
+/* teaching */
+.teach{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.tc{border-left:3px solid var(--blue);background:var(--tint);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.tc .h{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.tc .h b{font-family:var(--serif);font-size:18px;color:var(--navy);font-weight:600}
+.tc .h span{font-size:13px;color:var(--blue);font-weight:700;white-space:nowrap}
+.tc p{color:var(--ink-2);font-size:15px}
 
-/* interests */
-.int{margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:6px}
-.int li{padding:3px 10px; border:1px solid var(--line-2); border-radius:3px; font-size:13.5px}
-.int li b{color:var(--ink)}
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.cc{display:flex;align-items:center;gap:14px;padding:18px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;transition:background .15s}
+.cc:hover{background:var(--tint);text-decoration:none;color:var(--ink)}
+.cc .ms{font-size:22px;color:var(--blue);flex:0 0 auto}
+.cc .v{display:flex;flex-direction:column;min-width:0}
+.cc .v span{font-size:14px;color:var(--ink-2);overflow-wrap:anywhere}
 
-footer{margin-top:30px; padding-top:12px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+footer{border-top:1px solid var(--line);background:var(--tint-2)}
+footer div{max-width:1120px;margin:0 auto;padding:20px clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--ink-2)}
 
-@media (max-width:980px){
-  .grid{grid-template-columns:1fr; gap:24px}
-}
 @media (max-width:760px){
-  .head{grid-template-columns:auto 1fr; align-items:start}
-  .contact{grid-column:1 / -1; align-items:flex-start; text-align:left}
-  .langs{justify-content:flex-start}
-  .photo{width:110px; height:110px}
-  .two{grid-template-columns:1fr}
+  .rail{top:auto;bottom:0;left:0;right:0;width:auto;height:64px;flex-direction:row;justify-content:space-around;padding:0 8px;gap:0;border-left:0;border-top:1px solid var(--line-2);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .rail .avatar{display:none}
+  .rail nav{flex-direction:row;gap:0;flex:1;justify-content:space-around}
+  .shell{padding-right:0;padding-bottom:72px}
+  .hero{gap:28px}
+  .hero .side{flex-basis:100%;flex-direction:row;align-items:flex-start}
+  .hero .portrait{max-width:140px}
+  .langbox{flex:1}
+  .yr{grid-template-columns:56px 20px minmax(0,1fr)}
+  .card{flex-basis:260px;width:260px}
 }
-@media (max-width:480px){
-  .rows li,.exp li{grid-template-columns:1fr; gap:2px}
-  .exp li .dot{display:none}
-  .head{grid-template-columns:1fr}
-  .contact .row{white-space:normal}
-}
-@media print{
-  body{font-size:12px}
-  .copy{display:none}
-  .page{padding:0; max-width:none}
-}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 </head>
 <body>
 
-<div class="page">
+<aside class="rail" aria-label="Site navigation">
+  <a href="#hero" class="avatar" title="Samir Shinnawi" aria-label="Back to top"><img src="photo.jpg" alt=""></a>
+  <nav id="railnav">
+    <a href="#hero" title="Overview" aria-label="Overview"><span class="ms">person</span></a>
+    <a href="#trajectory" title="My trajectory" aria-label="My trajectory"><span class="ms">timeline</span></a>
+    <a href="#publications" title="Publications" aria-label="Publications"><span class="ms">article</span></a>
+    <a href="#awards" title="Awards" aria-label="Awards"><span class="ms">emoji_events</span></a>
+    <a href="#teaching" title="Teaching" aria-label="Teaching"><span class="ms">school</span></a>
+    <a href="#contact" title="Contact" aria-label="Contact"><span class="ms">mail</span></a>
+  </nav>
+</aside>
 
-<header class="head">
-  <img class="photo" src="photo.jpg" alt="Portrait of Samir Shinnawi" width="148" height="148">
-  <div class="id">
-    <h1>Samir <span class="mk">Shinnawi</span></h1>
-    <p class="role"><b>Attending Neuroradiologist</b>, Department of Radiology, Rambam Health Care Campus, Haifa</p>
-    <p class="sub">Dr. med. (Heinrich Heine University Düsseldorf) · MPH candidate, Tel Aviv University · Curriculum vitae, August 2026</p>
-  </div>
-  <div class="contact">
-    <span class="row"><span class="lab">Email</span> sa_shinnawi@rambam.health.gov.il <button class="copy" type="button" data-copy="sa_shinnawi@rambam.health.gov.il" aria-label="Copy hospital email">copy</button></span>
-    <span class="row">samirshin.du@gmail.com <button class="copy" type="button" data-copy="samirshin.du@gmail.com" aria-label="Copy personal email">copy</button></span>
-    <span class="row"><span class="lab">Phone</span> +972 54 259 4562 <button class="copy" type="button" data-copy="+972542594562" aria-label="Copy phone number">copy</button></span>
-    <div class="langs"><span>English</span><span>Arabic</span><span>Hebrew</span><span>German</span></div>
-  </div>
-</header>
+<div class="shell">
+<main>
 
-<div class="grid" id="grid">
-<div class="col">
-<section class="blk">
-  <h2>Professional experience</h2>
-  <ul class="rows exp">
-    <li class="now"><span class="when now">2026 – now</span><span class="dot"></span><div class="what"><b>Attending Neuroradiologist</b><span>Department of Radiology, Medical Imaging Division, Rambam Health Care Campus, Haifa</span></div></li>
-    <li class="now"><span class="when now">2026 – now</span><span class="dot"></span><div class="what"><b>Radiology Expert</b><span>Meta-Analysis Academy, Experts Program</span></div></li>
-    <li><span class="when">2025 – 2026</span><span class="dot"></span><div class="what"><b>Neuroradiology Fellow</b><span>Department of Radiology, Rambam Health Care Campus, Haifa</span></div></li>
-    <li class="now"><span class="when now">2024 – now</span><span class="dot"></span><div class="what"><b>Elected Representative, National Committee for Medical Residents</b><span>Israel Medical Association (IMA), on behalf of Rambam Health Care Campus</span></div></li>
-    <li class="now"><span class="when now">2023 – now</span><span class="dot"></span><div class="what"><b>National Delegate for Israel, Radiology Trainee Forum</b><span>Representing radiology trainees within the European Society of Radiology (ESR)</span></div></li>
-    <li><span class="when">2019 – 2025</span><span class="dot"></span><div class="what"><b>Resident, then Chief Resident (2023–2025), Radiology</b><span>Department of Radiology, Rambam Health Care Campus, Haifa · organised the weekly department seminar and journal club, 2020–2024</span></div></li>
-    <li><span class="when">2017 – 2018</span><span class="dot"></span><div class="what"><b>Rotating Internship</b><span>Rambam Health Care Campus, Haifa</span></div></li>
-    <li><span class="when">2016 – 2017</span><span class="dot"></span><div class="what"><b>Resident, Anesthesiology, Perioperative Care and Pain Medicine</b><span>Sana Hospital Duisburg, Germany</span></div></li>
-    <li><span class="when">2014 – 2017</span><span class="dot"></span><div class="what"><b>Board-certified First Aid Instructor</b><span>Düsseldorf, Germany</span></div></li>
-    <li><span class="when">2014 – 2015</span><span class="dot"></span><div class="what"><b>USMLE Step 1 and Step 2</b><span>United States Medical Licensing Examination</span></div></li>
-  </ul>
-</section>
-
-<section class="blk">
-  <h2>Teaching <small>Technion and Rambam</small></h2>
-  <ul class="rows tight">
-    <li><span class="when now">2020 – now</span><div class="what"><b>Lecturer, Radiology and Neuroradiology</b><span>5th- and 6th-year medical students, Rappaport Faculty of Medicine, Technion</span></div></li>
-    <li><span class="when now">2021 – now</span><div class="what"><b>Lecturer, Anatomy, Pathology and Pathophysiology</b><span>School of Radiology and Imaging, Rambam</span></div></li>
-    <li><span class="when now">2024 – now</span><div class="what"><b>Instructor, Physiology course (problem-based learning)</b><span>Rappaport Faculty of Medicine, Technion</span></div></li>
-    <li><span class="when now">2023 – now</span><div class="what"><b>Advisor and Mentor, Radiology Special Interest Group</b><span>Technion American Medical School</span></div></li>
-    <li><span class="when">2023</span><div class="what"><b>Mentor, Technion Summer Shadowing Program</b><span>Two American students at Rambam</span></div></li>
-    <li><span class="when">2023</span><div class="what"><b>Lecture, "Introduction to Medical Imaging: the Chronically Ill Patient"</b><span>Advanced nursing training, Cooperative Chronic Module, Rambam</span></div></li>
-    <li><span class="when">2023</span><div class="what"><b>Lecture, "Radiology and Anatomy"</b><span>Radiology Club, Technion American Medical School</span></div></li>
-    <li><span class="when">2011 – 2015</span><div class="what"><b>Tutor, Meditorium, all pre-clinical subjects</b><span>Over 200 medical students from 60 countries, Heinrich Heine University Düsseldorf</span></div></li>
-  </ul>
-  <h3 style="margin-top:14px">Supervised MD thesis</h3>
-  <ul class="rows tight">
-    <li><span class="when">2022</span><div class="what"><b>Jared Cohen, "Perforated Small Bowel Diverticulitis: Case Report"</b><span>Co-supervisor, with Dr. Sobhi Abadi as primary supervisor</span></div></li>
-  </ul>
-</section>
-
-<section class="blk">
-    <h2>Courses and mentorship</h2>
-    <ul class="rows tight">
-      <li><span class="when">2025 – 2026</span><div class="what"><b>ESNR Mentor–Mentee Program</b><span>Mentee of Chen Hoffmann</span></div></li>
-      <li><span class="when">2025</span><div class="what"><b>European Course on AI in Neuroimaging</b><span>Online, Switzerland</span></div></li>
-      <li><span class="when">2025</span><div class="what"><b>Meta-Analysis Academy, VII cohort</b><span>Mentee</span></div></li>
-      <li><span class="when">2024 – 2025</span><div class="what"><b>ASNR Young Professionals Mentor Program</b><span>Mentee of Robert Young</span></div></li>
-      <li><span class="when">2024</span><div class="what"><b>ESNR Basic Neuroradiology Course</b><span>Online, Switzerland</span></div></li>
-      <li><span class="when">2020</span><div class="what"><b>Good Clinical Practice (GCP) training</b><span>Rambam Health Care Campus</span></div></li>
-    </ul>
-  </section>
-
-<section class="blk">
-  <h2>Publications <small>refereed</small></h2>
-  <ul class="pubs">
-    <li><span>Rootman MS, <span class="me">Shinnawi S</span>, Merhav G, Friedman BC, Pratt L-T. <span class="t">Imaging of Cerebral Palsy: A Primer for the Radiologist.</span> <i>Neurographics</i> 2025;15(2):131–143. Invited.</span></li>
-    <li><span>Soppa VJ, <span class="me">Shinnawi S</span>, Hennig F, Sasse B, Hellack B, Kaminski H, et al. <span class="t">Effects of short-term exposure to fine and ultrafine particles from indoor sources on arterial stiffness: a randomized sham-controlled exposure study.</span> <i>Int J Hyg Environ Health</i> 2019;222(8):1115–1132.</span></li>
-    <li><span>Soppa V, <span class="me">Shinnawi S</span>, Hellack B, Quass U, Kaminski H, Schins R, Kuhlbusch T, Hoffmann B. <span class="t">Effects of different size fractions of ultrafine particles from short-term exposure to indoor sources on arterial stiffness using single and multipollutant modeling.</span> <i>Environmental Epidemiology</i> 2019;3(Suppl):378.</span></li>
-    <li><span>Soppa VJ, Schins RPF, Hennig F, Nieuwenhuijsen MJ, Hellack B, Quass U, Kaminski H, Sasse B, <span class="me">Shinnawi S</span>, Kuhlbusch TAJ, Hoffmann B. <span class="t">Arterial blood pressure responses to short-term exposure to fine and ultrafine particles from indoor sources: a randomized sham-controlled exposure study of healthy volunteers.</span> <i>Environ Res</i> 2017;158:225–232.</span></li>
-  </ul>
-  <h3 style="margin-top:14px">Doctoral thesis</h3>
-  <ul class="pubs" style="counter-reset:p">
-    <li><span><span class="me">Shinnawi S.</span> <span class="t">Effects of short-term exposure to fine and ultrafine particles from indoor sources on arterial stiffness.</span> Dr. med., 2018, supervised by Prof. Dr. med. Barbara Hoffmann, MPH, Düsseldorf University Hospital.</span></li>
-  </ul>
-</section>
-</div>
-
-<div class="col">
-<section class="blk">
-    <h2>Education</h2>
-    <ul class="rows">
-      <li><span class="when now">2022 – now</span><div class="what"><b>Master of Public Health (MPH), in progress</b><span>Faculty of Medical and Health Sciences, Tel Aviv University</span><span class="pill">Whitman Scholarship 2024</span></div></li>
-      <li><span class="when">2018</span><div class="what"><b>Dr. med., magna cum laude</b><span>Heinrich Heine University Düsseldorf. Thesis: short-term exposure to fine and ultrafine particles from indoor sources and arterial stiffness</span></div></li>
-      <li><span class="when">2009 – 2016</span><div class="what"><b>Human Medicine</b><span>Faculty of Medicine, Heinrich Heine University Düsseldorf, Germany</span></div></li>
-    </ul>
-  </section>
-
-  <section class="blk">
-    <h2>Awards and honors</h2>
-    <ul class="awd">
-      <li><span class="when">2024</span><div><b>International Recognition Award: Israel</b>, <span>ASNR annual meeting, for the educational exhibit on imaging of cerebral palsy</span></div></li>
-      <li><span class="when">2024</span><div><b>Lois and Martin Whitman Scholarship</b> <span>for MPH studies</span></div></li>
-      <li><span class="when">2022, 2023</span><div><b>"Invest in the Youth" winner, twice</b>, <span>European Congress of Radiology, for educational exhibits</span></div></li>
-      <li><span class="when">2016</span><div><b>Excellence certificate for intercultural competence</b> <span>as a tutor, Heinrich Heine University</span></div></li>
-      <li><span class="when">2007</span><div><b>Certificate of Excellence for Social Engagement</b>, <span>NOAM project for outstanding Arab youth, Technion</span></div></li>
-    </ul>
-  </section>
-
-  <section class="blk">
-    <h2>Research interests</h2>
-    <ul class="int">
-      <li><b>Neuroradiology</b></li>
-      <li><b>Medical education</b>, undergraduate</li>
-      <li><b>Public health</b>, environmental exposure and outcomes</li>
-    </ul>
-  </section>
-
-<section class="blk">
-    <h2>Professional societies</h2>
-    <div class="two">
-      <div>
-        <h3>National</h3>
-        <ul class="mem">
-          <li><span class="when">2019</span><span>Israel Medical Association (IMA)</span></li>
-          <li><span class="when">2022</span><span>Israel Radiological Association (IRA)</span></li>
-          <li><span class="when">2024</span><span>IMA National Committee of Medical Residents, elected</span></li>
-        </ul>
+  <section id="hero" class="hero">
+    <div class="txt">
+      <span class="eyebrow">Attending Neuroradiologist · Lecturer · Researcher</span>
+      <h1>Samir Shinnawi</h1>
+      <span class="where">Rambam Health Care Campus, Haifa, Israel</span>
+      <p class="intro">I have <b>trained and practised medicine in Germany and Israel, in four languages</b>: Arabic, English, German and Hebrew. Today I am a neuroradiologist at Rambam, I teach radiology at the <b>Technion</b>, and I hold an <b>International Recognition Award from the ASNR</b>.</p>
+      <div class="chips">
+        <span>Neuroradiology</span>
+        <span>Neurotrauma and venous sinus thrombosis</span>
+        <span>Pediatric neuroimaging</span>
+        <span>Medical education</span>
+        <span>Public health</span>
       </div>
-      <div>
-        <h3>International</h3>
-        <ul class="mem">
-          <li><span class="when">2020</span><span>Radiological Society of North America (RSNA)</span></li>
-          <li><span class="when">2020</span><span>European Society of Radiology (ESR)</span></li>
-          <li><span class="when">2020</span><span>Society of Abdominal Radiology (SAR)</span></li>
-          <li><span class="when">2023</span><span>American Society of Neuroradiology (ASNR)</span></li>
-          <li><span class="when">2023</span><span>European Society of Neuroradiology (ESNR)</span></li>
-          <li><span class="when">2024</span><span>British Society of Neuroradiologists (BSNR)</span></li>
-        </ul>
+      <div class="ctas">
+        <a href="#contact" class="btn primary"><span class="ms">mail</span>Contact me</a>
+        <a href="#trajectory" class="btn ghost"><span class="ms">timeline</span>My trajectory</a>
+        <a href="Shinnawi_CV_2026.pdf" download="Samir_Shinnawi_CV_2026.pdf" class="btn ghost"><span class="ms">download</span>Download full CV</a>
+      </div>
+    </div>
+    <div class="side">
+      <img class="portrait" src="photo.jpg" alt="Portrait of Samir Shinnawi" width="300" height="375">
+      <div class="langbox">
+        <div class="t"><span class="ms">language</span><b>LANGUAGES</b></div>
+        <div class="lang"><span>Arabic</span><span class="bar"><i></i></span><b>Fluent</b></div>
+        <div class="lang"><span>English</span><span class="bar"><i></i></span><b>Fluent</b></div>
+        <div class="lang"><span>German</span><span class="bar"><i></i></span><b>Fluent</b></div>
+        <div class="lang"><span>Hebrew</span><span class="bar"><i></i></span><b>Fluent</b></div>
       </div>
     </div>
   </section>
 
-  <section class="blk">
-  <h2>Conference presentations <small>first author</small></h2>
-  <h3>International</h3>
-  <ul class="rows tight">
-    <li><span class="when">May 2026</span><div class="what"><b>Preliminary Meta-Analysis of Cerebral Venous Sinus Thrombosis in Traumatic Brain Injury</b><span>ASNR Annual Meeting, Texas, USA</span></div></li>
-    <li><span class="when">Mar 2026</span><div class="what"><b>Cerebral Venous Sinus Thrombosis in Traumatic Brain Injury with Skull Fractures</b><span>ECR, Vienna</span></div></li>
-    <li><span class="when">May 2024</span><div class="what"><b>Imaging of Cerebral Palsy: A Primer for the Radiologist</b><span>ASNR Annual Meeting, Las Vegas · International Recognition Award: Israel</span></div></li>
-    <li><span class="when">Sep 2023</span><div class="what"><b>Calcified Paraganglioma of the Cavernous Sinus</b><span>46th ESNR Annual Meeting, Vienna</span></div></li>
-    <li><span class="when">Mar 2023</span><div class="what"><b>Visceral Artery Aneurysms: Case-based Pictorial Review</b><span>ECR, Vienna · Invest in the Youth</span></div></li>
-    <li><span class="when">Jul 2022</span><div class="what"><b>Cysts of the Lower GU Tract: Pearls and Pitfalls in Imaging, Diagnosis, and Management</b><span>ECR, Vienna · Invest in the Youth</span></div></li>
-    <li><span class="when">Mar 2022</span><div class="what"><b>Imaging of Trauma in Pregnancy</b><span>SAR Annual Meeting, Arizona, USA</span></div></li>
-    <li><span class="when">Mar 2021</span><div class="what"><b>Imaging Triage of the Acute Abdomen in Pregnancy</b><span>SAR Annual Meeting, digital</span></div></li>
-  </ul>
-  <h3>National, oral</h3>
-  <ul class="rows tight">
-    <li><span class="when">May 2023</span><div class="what"><b>Visceral Artery Aneurysms: Single-Center Experience in Endovascular Treatment</b><span>ISRA Annual Meeting, Kfar Blum</span></div></li>
-    <li><span class="when">Mar 2022</span><div class="what"><b>Injuries in a Unique Condition: Imaging in Pregnancy</b><span>Northern Israel Trauma Forum, Rambam</span></div></li>
-    <li><span class="when">Dec 2020</span><div class="what"><b>Mediastinal Chloroma: A Rare Initial Manifestation of AML in an Adult Female</b><span>ISRA Annual Meeting, virtual</span></div></li>
-  </ul>
-</section>
-</div>
+  <section class="stats" aria-label="At a glance">
+    <div><span class="n" data-count="10">10</span><b>Years as a physician</b><span class="s">Since graduating in 2016</span></div>
+    <div><span class="n" data-count="11">11</span><b>Conference presentations</b><span class="s">First author, ASNR, ECR, ESNR, SAR, ISRA</span></div>
+    <div><span class="n" data-count="200">200+</span><b>Students tutored</b><span class="s">From 60 countries</span></div>
+    <div><span class="n" data-count="4">4</span><b>Languages</b><span class="s">Fluent in all four</span></div>
+  </section>
 
-</div>
+  <section id="trajectory" class="section">
+    <div class="sec-head">
+      <span class="eyebrow">About</span>
+      <h2 class="h2">My trajectory</h2>
+      <p class="lead">From medical school in Düsseldorf to neuroradiology in Haifa.</p>
+    </div>
+    <div class="tl">
+      <div class="yr"><span class="y">2009</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">school</span><h3>Medical school</h3></div><p>Started Human Medicine at Heinrich Heine University Düsseldorf, Germany.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2011</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">groups</span><h3>Tutoring</h3></div><p>Began tutoring all pre-clinical subjects at Meditorium, reaching over 200 students from 60 countries by 2015.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2014</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">verified</span><h3>USMLE and first aid instruction</h3></div><p>Passed USMLE Step 1 and Step 2 and became a board-certified first aid instructor in Düsseldorf.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2016</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">medical_services</span><h3>Graduation and first residency</h3></div><p>Graduated and started residency in anesthesiology, perioperative care and pain medicine at Sana Hospital Duisburg.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2017</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">article</span><h3>First paper, move to Haifa</h3></div><p>First co-authored paper in Environmental Research. Moved to Israel for the rotating internship at Rambam Health Care Campus.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2018</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">workspace_premium</span><h3>Dr. med., magna cum laude</h3></div><p>Doctoral thesis on indoor fine and ultrafine particles and arterial stiffness, supervised by Prof. Barbara Hoffmann, Düsseldorf.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2019</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">radiology</span><h3>Radiology residency</h3></div><p>Started radiology residency at Rambam Health Care Campus. Joined the Israel Medical Association.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2020</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">co_present</span><h3>Lecturer at the Technion</h3></div><p>Began lecturing radiology and neuroradiology to 5th- and 6th-year students. Took over the weekly department seminar and journal club. First national talk at ISRA.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2021</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">public</span><h3>First international presentation</h3></div><p>Imaging triage of the acute abdomen in pregnancy at the Society of Abdominal Radiology. Started lecturing anatomy, pathology and pathophysiology at the Rambam School of Radiology and Imaging.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2022</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">emoji_events</span><h3>MPH and first ECR award</h3></div><p>Started the MPH at Tel Aviv University and won "Invest in the Youth" at the European Congress of Radiology.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2023</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">flag</span><h3>Chief Resident and national delegate</h3></div><p>Became Chief Resident, won "Invest in the Youth" a second time, and became National Delegate for Israel at the ESR Radiology Trainee Forum.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2024</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">workspace_premium</span><h3>International recognition</h3></div><p>ASNR International Recognition Award for the cerebral palsy exhibit, Lois and Martin Whitman Scholarship, and election to the IMA National Committee for Medical Residents.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2025</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">neurology</span><h3>Neuroradiology fellowship</h3></div><p>Fellowship at Rambam, an invited review in Neurographics, and the ESNR mentor–mentee programme.</p></div>
+      </div></div>
+      <div class="yr"><span class="y">2026</span><span class="rule"></span><div class="body">
+        <div class="ev"><div class="h"><span class="ms">stethoscope</span><h3>Attending Neuroradiologist</h3></div><p>Appointed attending neuroradiologist at Rambam and Radiology Expert at the Meta-Analysis Academy. Presenting at ECR Vienna and the ASNR annual meeting.</p></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="publications" class="section">
+    <div class="pubhead">
+      <div class="sec-head">
+        <span class="eyebrow">Research</span>
+        <h2 class="h2">Publications</h2>
+        <p class="lead">Four peer-reviewed papers and a doctoral thesis, in neuroimaging and environmental health.</p>
+      </div>
+      <div class="carnav">
+        <button type="button" id="prev" aria-label="Previous publications"><span class="ms">chevron_left</span></button>
+        <button type="button" id="next" aria-label="Next publications"><span class="ms">chevron_right</span></button>
+      </div>
+    </div>
+    <div class="track" id="track" tabindex="0" aria-label="Publications carousel">
+      <article class="card">
+        <span class="tag">Neuroradiology</span>
+        <span class="jr">Neurographics · 2025</span>
+        <b class="ti">Imaging of Cerebral Palsy: A Primer for the Radiologist</b>
+        <span class="note">Invited review · 15(2):131–143</span>
+      </article>
+      <article class="card">
+        <span class="tag">Environmental health</span>
+        <span class="jr">Int J Hyg Environ Health · 2019</span>
+        <b class="ti">Effects of short-term exposure to fine and ultrafine particles from indoor sources on arterial stiffness</b>
+        <span class="note">Randomized sham-controlled study · 222(8)</span>
+      </article>
+      <article class="card">
+        <span class="tag">Environmental health</span>
+        <span class="jr">Environmental Epidemiology · 2019</span>
+        <b class="ti">Ultrafine particle size fractions and arterial stiffness: single and multipollutant modeling</b>
+        <span class="note">3(Suppl):378</span>
+      </article>
+      <article class="card">
+        <span class="tag">Doctoral thesis</span>
+        <span class="jr">Heinrich Heine University · 2018</span>
+        <b class="ti">Effects of short-term exposure to fine and ultrafine particles from indoor sources on arterial stiffness</b>
+        <span class="note">Dr. med., magna cum laude</span>
+      </article>
+      <article class="card">
+        <span class="tag">Environmental health</span>
+        <span class="jr">Environmental Research · 2017</span>
+        <b class="ti">Arterial blood pressure responses to short-term exposure to fine and ultrafine particles from indoor sources</b>
+        <span class="note">Healthy volunteers · 158:225–232</span>
+      </article>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </section>
+
+  <section id="awards" class="section">
+    <div class="sec-head">
+      <span class="eyebrow">Recognition</span>
+      <h2 class="h2">Awards and honors</h2>
+    </div>
+    <div class="awards">
+      <div class="aw"><b class="t">International Recognition Award: Israel</b><div class="logo wide"><img src="logos/asnr-logo.svg" alt="American Society of Neuroradiology"></div><span class="d"><b>2024</b> · ASNR annual meeting, for the educational exhibit on imaging of cerebral palsy</span></div>
+      <div class="aw"><b class="t">Invest in the Youth, twice</b><div class="logo wide"><img src="logos/esr.png" alt="European Society of Radiology"></div><span class="d"><b>2022, 2023</b> · European Congress of Radiology, for educational exhibits</span></div>
+      <div class="aw"><b class="t">Whitman Scholarship</b><div class="logo wide"><img src="logos/tau.png" alt="Tel Aviv University"></div><span class="d"><b>2024</b> · Lois and Martin Whitman Scholarship for MPH studies</span></div>
+      <div class="aw"><b class="t">Intercultural Competence</b><div class="logo"><img src="logos/hhu.svg" alt="Heinrich Heine University Düsseldorf"></div><span class="d"><b>2016</b> · Excellence certificate as a tutor, Heinrich Heine University</span></div>
+      <div class="aw"><b class="t">Social Engagement</b><div class="logo"><img src="logos/technion.svg" alt="Technion"></div><span class="d"><b>2007</b> · NOAM project for outstanding Arab youth, Technion</span></div>
+    </div>
+  </section>
+
+  <section id="teaching" class="section">
+    <div class="sec-head">
+      <span class="eyebrow">Teaching</span>
+      <h2 class="h2">Educational and teaching achievements</h2>
+      <p class="lead">Teaching medical students, radiographers and nurses since 2011.</p>
+    </div>
+    <div class="teach">
+      <div class="tc"><div class="h"><b>Technion</b><span>2020 – now</span></div><p>Lecturer in radiology and neuroradiology for 5th- and 6th-year students, Rappaport Faculty of Medicine. Physiology PBL instructor since 2024.</p></div>
+      <div class="tc"><div class="h"><b>Rambam</b><span>2021 – now</span></div><p>Lecturer in anatomy, pathology and pathophysiology at the School of Radiology and Imaging. Lecture for advanced nursing training, 2023.</p></div>
+      <div class="tc"><div class="h"><b>Mentoring</b><span>2022 – now</span></div><p>Advisor to the Radiology Special Interest Group, Technion American Medical School. Summer shadowing mentor. MD thesis co-supervisor.</p></div>
+      <div class="tc"><div class="h"><b>Meditorium</b><span>2011 – 2015</span></div><p>Tutor in all pre-clinical subjects to over 200 medical students from 60 countries, Heinrich Heine University Düsseldorf.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="sec-head">
+      <span class="eyebrow">Contact</span>
+      <h2 class="h2">Get in touch</h2>
+    </div>
+    <div class="contact">
+      <a class="cc" href="mailto:sa_shinnawi@rambam.health.gov.il"><span class="ms">local_hospital</span><span class="v"><b>Hospital email</b><span>sa_shinnawi@rambam.health.gov.il</span></span></a>
+      <a class="cc" href="mailto:samirshin.du@gmail.com"><span class="ms">mail</span><span class="v"><b>Personal email</b><span>samirshin.du@gmail.com</span></span></a>
+      <a class="cc" href="tel:+972542594562"><span class="ms">call</span><span class="v"><b>Phone</b><span>+972 54 259 4562</span></span></a>
+      <a class="cc" href="Shinnawi_CV_2026.pdf" download="Samir_Shinnawi_CV_2026.pdf"><span class="ms">download</span><span class="v"><b>Full CV</b><span>PDF, August 2026</span></span></a>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <span>Samir Shinnawi · Haifa, Israel</span>
-  <span>Updated August 2026</span>
+  <div>
+    <span>Samir Shinnawi · Attending Neuroradiologist, Rambam Health Care Campus</span>
+    <span>Haifa, Israel</span>
+  </div>
 </footer>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/motion@13.4.4/dist/motion.js"></script>
 <script>
 (function(){
-  function selectFallback(btn){
-    var r = document.createRange(); r.selectNodeContents(btn.parentElement); r.setEndBefore(btn);
-    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  // Carousel: scroll by one card, keep buttons and dots in sync.
+  var track = document.getElementById('track'), prev = document.getElementById('prev'), next = document.getElementById('next'), dots = document.getElementById('dots');
+  var cards = Array.prototype.slice.call(track.children);
+  cards.forEach(function(){ dots.appendChild(document.createElement('i')); });
+  function step(){ return cards[0].getBoundingClientRect().width + 16; }
+  function sync(){
+    var max = track.scrollWidth - track.clientWidth - 1;
+    prev.disabled = track.scrollLeft <= 1; next.disabled = track.scrollLeft >= max;
+    var idx = Math.round(track.scrollLeft / step());
+    Array.prototype.forEach.call(dots.children, function(d, i){ d.className = i === idx ? 'on' : ''; });
   }
-  document.querySelectorAll('.copy').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var text = btn.getAttribute('data-copy');
-      var done = function(){ btn.textContent = 'copied'; btn.dataset.done = '1';
-        setTimeout(function(){ btn.textContent = 'copy'; delete btn.dataset.done; }, 1500); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(done).catch(function(){ selectFallback(btn); });
-      } else { selectFallback(btn); }
-    });
-  });
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+  track.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('resize', sync);
+  sync();
+
+  // Active section in the rail.
+  var links = Array.prototype.slice.call(document.querySelectorAll('#railnav a'));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (!e.isIntersecting) return;
+        links.forEach(function(a){ a.removeAttribute('aria-current'); });
+        var a = links[targets.indexOf(e.target)]; if (a) a.setAttribute('aria-current', 'true'); });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    targets.forEach(function(t){ if (t) io.observe(t); });
+  }
 
   var M = window.Motion;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!M || reduce) return;
   var animate = M.animate, stagger = M.stagger, inView = M.inView;
 
-  // Header settles in, then the yellow mark under the surname draws.
-  animate(document.querySelectorAll('.photo, .id, .contact'), { opacity: [0, 1], y: [8, 0] }, { duration: 0.5, delay: stagger(0.08), ease: 'easeOut' });
-  var mk = document.querySelector('.mk');
-  mk.style.setProperty('--mkScale', '0');
-  var st = document.createElement('style'); st.textContent = '.mk::after{transform:scaleX(var(--mkScale,1))}'; document.head.appendChild(st);
-  animate(0, 1, { duration: 0.6, delay: 0.45, ease: [0.22, 1, 0.36, 1], onUpdate: function(v){ mk.style.setProperty('--mkScale', String(v)); } });
+  // Hero settles in; language bars fill.
+  animate(document.querySelectorAll('.hero .txt > *'), { opacity: [0, 1], y: [10, 0] }, { duration: 0.5, delay: stagger(0.07), ease: 'easeOut' });
+  animate(document.querySelectorAll('.hero .side > *'), { opacity: [0, 1], y: [10, 0] }, { duration: 0.5, delay: stagger(0.1, { startDelay: 0.2 }), ease: 'easeOut' });
+  animate(document.querySelectorAll('.lang .bar i'), { scaleX: [0, 1] }, { duration: 0.8, delay: stagger(0.1, { startDelay: 0.5 }), ease: [0.22, 1, 0.36, 1] });
 
-  // Each block rises in as it enters view; rows inside follow in quick succession.
-  document.querySelectorAll('.blk').forEach(function(blk, i){
-    var rows = blk.querySelectorAll('li');
-    inView(blk, function(){
-      animate(blk.querySelector('h2'), { opacity: [0, 1], x: [-6, 0] }, { duration: 0.4, ease: 'easeOut' });
-      animate(rows, { opacity: [0, 1], y: [6, 0] }, { duration: 0.35, delay: stagger(0.025, { startDelay: 0.05 }), ease: 'easeOut' });
-    }, { amount: 0.15 });
+  // Stats count up once visible.
+  document.querySelectorAll('.stats .n').forEach(function(el){
+    var target = parseInt(el.getAttribute('data-count'), 10), suffix = target >= 100 ? '+' : '';
+    inView(el, function(){
+      animate(0, target, { duration: 1.1, ease: [0.22, 1, 0.36, 1], onUpdate: function(v){ el.textContent = Math.round(v) + suffix; } });
+    }, { amount: 0.6 });
+  });
+
+  // Sections rise as they enter; timeline years and cards stagger.
+  document.querySelectorAll('.section').forEach(function(sec){
+    var items = sec.querySelectorAll('.yr, .card, .aw, .tc, .cc');
+    inView(sec, function(){
+      animate(sec.querySelector('.sec-head'), { opacity: [0, 1], y: [12, 0] }, { duration: 0.5, ease: 'easeOut' });
+      animate(items, { opacity: [0, 1], y: [12, 0] }, { duration: 0.45, delay: stagger(0.06, { startDelay: 0.1 }), ease: 'easeOut' });
+    }, { amount: 0.1 });
   });
 })();
 </script>

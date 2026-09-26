@@ -1,11 +1,12 @@
 # Samir Shinnawi — CV site
 
-Single static page. No build step.
+Static single page, no build step. Live at https://vanioljantunes.github.io/shinnawi-cv/
 
-- `index.html` — the whole site (CSS + content + animation inline).
-- Animation: [Motion](https://motion.dev) v13.4.4, loaded as UMD from jsDelivr (`window.Motion`): `animate`, `stagger`, `inView`, `scroll`, `hover`.
-- Fonts: Fraunces, IBM Plex Sans, IBM Plex Mono via Google Fonts.
+- `index.html` — the whole site (CSS, content and animation inline)
+- `photo.jpg` — portrait
+- `Shinnawi_CV_2026.pdf` — full CV served by the "Download full CV" button
+- `logos/` — ASNR (official SVG), ESR, Tel Aviv University, HHU Düsseldorf, Technion
 
-Open `index.html` directly, or host the folder on any static host (GitHub Pages, Vercel, Netlify).
+Animation: [Motion](https://motion.dev) v13.4.4 as UMD from jsDelivr. Fonts and Material Symbols from Google Fonts.
 
-To update content, edit the sections in `index.html`; each CV section is a `<section class="section" id="...">` block.
+To update: edit `index.html`, commit, push. GitHub Pages rebuilds in about a minute.
