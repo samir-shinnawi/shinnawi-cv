@@ -1,6 +1,6 @@
 # Samir Shinnawi — CV site
 
-Static single page, no build step. Live at https://vanioljantunes.github.io/shinnawi-cv/
+Static single page, no build step. Live at https://samir-shinnawi.github.io/shinnawi-cv/
 
 - `index.html` — the whole site (CSS, content and animation inline)
 - `photo.jpg` — portrait
